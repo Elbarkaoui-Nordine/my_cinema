@@ -41,15 +41,15 @@ if(isset($_GET['filmValue']) && !empty($_GET['filmValue']))
             if($pageTotal > 1)
             {
                 echo "<div id='pagebtn'>";
-                echo "<a href='cinema.php?page=1&filmValue=".$_GET['filmValue']."&selectFilm=Titre&NOP=".$filmParPage."'><button><<</button></a>";
+                echo "<a href='index.php?page=1&filmValue=".$_GET['filmValue']."&selectFilm=Titre&NOP=".$filmParPage."'><button><<</button></a>";
                 for($i = -4; $i < 5; $i++)
                 {
                     if(($pagecourante+$i) > 0 && ($pagecourante+$i) <= $pageTotal)
                     {
-                        echo "<a href='cinema.php?page=".($pagecourante+$i)."&filmValue=".$_GET['filmValue']."&selectFilm=Titre&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
+                        echo "<a href='index.php?page=".($pagecourante+$i)."&filmValue=".$_GET['filmValue']."&selectFilm=Titre&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
                     }
                 }
-                echo "<a href='cinema.php?page=".$pageTotal."&filmValue=".$_GET['filmValue']."&selectFilm=Titre&NOP=".$filmParPage."'><button>>></button></a>";
+                echo "<a href='index.php?page=".$pageTotal."&filmValue=".$_GET['filmValue']."&selectFilm=Titre&NOP=".$filmParPage."'><button>>></button></a>";
                 echo "</div>";
             }
         }
@@ -77,15 +77,15 @@ if(isset($_GET['filmValue']) && !empty($_GET['filmValue']))
             if($pageTotal > 1)
             {
                 echo "<div id='pagebtn'>";
-                echo "<a href='cinema.php?page=1&filmValue=".$_GET['filmValue']."&selectFilm=Genre&NOP=".$filmParPage."'><button><<</button></a>";
+                echo "<a href='index.php?page=1&filmValue=".$_GET['filmValue']."&selectFilm=Genre&NOP=".$filmParPage."'><button><<</button></a>";
                 for($i = -4; $i < 5; $i++)
                 {
                     if(($pagecourante+$i) > 0 && ($pagecourante+$i) <= $pageTotal)
                     {
-                        echo "<a href='cinema.php?page=".($pagecourante+$i)."&filmValue=".$_GET['filmValue']."&selectFilm=Genre&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
+                        echo "<a href='index.php?page=".($pagecourante+$i)."&filmValue=".$_GET['filmValue']."&selectFilm=Genre&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
                     }
                 }
-                echo "<a href='cinema.php?page=".$pageTotal."&filmValue=".$_GET['filmValue']."&selectFilm=Genre&NOP=".$filmParPage."'><button>>></button></a>";
+                echo "<a href='index.php?page=".$pageTotal."&filmValue=".$_GET['filmValue']."&selectFilm=Genre&NOP=".$filmParPage."'><button>>></button></a>";
                 echo "</div>";
             }
         }
@@ -107,15 +107,15 @@ if(isset($_GET['filmValue']) && !empty($_GET['filmValue']))
             if($pageTotal > 1)
             {
                 echo "<div id='pagebtn'>";
-                echo "<a href='cinema.php?page=1&filmValue=".$_GET['filmValue']."&selectFilm=Distrib&NOP=".$filmParPage."'><button><<</button></a>";
+                echo "<a href='index.php?page=1&filmValue=".$_GET['filmValue']."&selectFilm=Distrib&NOP=".$filmParPage."'><button><<</button></a>";
                 for($i = -4; $i < 5; $i++)
                 {
                     if(($pagecourante+$i) > 0 && ($pagecourante+$i) <= $pageTotal)
                     {
-                        echo "<a href='cinema.php?page=".($pagecourante+$i)."&filmValue=".$_GET['filmValue']."&selectFilm=Distrib&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
+                        echo "<a href='index.php?page=".($pagecourante+$i)."&filmValue=".$_GET['filmValue']."&selectFilm=Distrib&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
                     }
                 }
-                echo "<a href='cinema.php?page=".$pageTotal."&filmValue=".$_GET['filmValue']."&selectFilm=Distrib&NOP=".$filmParPage."'><button>>></button></a>";
+                echo "<a href='index.php?page=".$pageTotal."&filmValue=".$_GET['filmValue']."&selectFilm=Distrib&NOP=".$filmParPage."'><button>>></button></a>";
                 echo "</div>";
             }
 
@@ -137,20 +137,20 @@ elseif(isset($_GET['membreValue']) && !empty($_GET['membreValue']))
 
         while($titre = $req->fetch()){
             echo "<div class='border card'><p id=size> ID Perso : ".$titre['id_perso']."<br> nom : ".$titre['nom']."<br>Prenom : ".$titre['prenom']."<br>Date de naissaince : ".substr($titre['date_naissance'],0,-8)."<br>Email : ".$titre['email']."<br>Code Postale : ".$titre['cpostal']." Ville : ".$titre['ville'].'
-            </p><a href="cinema.php?histoId='.$titre['id_perso'].'&histoNom='.$titre['nom'].'&histoPrenom='.$titre['prenom'].'&NOP='.$_GET['NOP'].'"><button>Afficher l\'historique</button></a><br></div>';
+            </p><a href="index.php?histoId='.$titre['id_perso'].'&histoNom='.$titre['nom'].'&histoPrenom='.$titre['prenom'].'&NOP='.$_GET['NOP'].'"><button>Afficher l\'historique</button></a><br></div>';
         }
         if($pageTotal > 1)
         {
             echo "<div id='pagebtn'>";
-            echo "<a href='cinema.php?page=1&membreValue=".$_GET['membreValue']."&NOP=".$filmParPage."'><button><<</button></a>";
+            echo "<a href='index.php?page=1&membreValue=".$_GET['membreValue']."&NOP=".$filmParPage."'><button><<</button></a>";
             for($i = -4; $i < 5; $i++)
             {
                 if(($pagecourante+$i) > 0 && ($pagecourante+$i) <= $pageTotal)
                 {
-                    echo "<a href='cinema.php?page=".($pagecourante+$i)."&membreValue=".$_GET['membreValue']."&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
+                    echo "<a href='index.php?page=".($pagecourante+$i)."&membreValue=".$_GET['membreValue']."&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
                 }
             }
-            echo "<a href='cinema.php?page=".$pageTotal."&membreValue=".$_GET['membreValue']."&NOP=".$filmParPage."'><button>>></button></a>";
+            echo "<a href='index.php?page=".$pageTotal."&membreValue=".$_GET['membreValue']."&NOP=".$filmParPage."'><button>>></button></a>";
             echo "</div>";
         }
     
@@ -173,7 +173,7 @@ elseif(isset($_GET['histoId']) && !empty($_GET['histoId']) && isset($_GET['histo
         echo '<p id="nofound">Historique de '.$_GET['histoNom'].' '. $_GET['histoPrenom'].':<p>';
         while($titre = $req->fetch()){
 
-            echo "<div class='border' id='".$titre['id_film']."'><a id='titre' href='cinema.php?filmid=".$titre['id_film']."'>".$titre['titre']."</a><br>Vue le :".substr($titre['date'],0,-8);
+            echo "<div class='border' id='".$titre['id_film']."'><a id='titre' href='index.php?filmid=".$titre['id_film']."'>".$titre['titre']."</a><br>Vue le :".substr($titre['date'],0,-8);
 
             if(!empty($titre['Avis']))
             {
@@ -205,7 +205,7 @@ elseif(isset($_GET['histoId']) && !empty($_GET['histoId']) && isset($_GET['histo
             
             echo "<br>Notez ce film :
             <button id='".$titre['id_membre']."'class='note'>Donner votre avis</button>
-            <form  method='GET' action='cinema.php'>
+            <form  method='GET' action='index.php'>
             <select name='addnote' id='selector' onchange='this.form.submit()'>";
 
             for($i = 0 ; $i < 6 ; $i++){
@@ -231,15 +231,15 @@ elseif(isset($_GET['histoId']) && !empty($_GET['histoId']) && isset($_GET['histo
     if($pageTotal > 1)
     {
         echo "<div id='pagebtn'>";
-        echo "<a href='cinema.php?page=1&histoId=".$_GET['histoId']."&histoNom=".$_GET['histoNom']."&histoPrenom=".$_GET['histoPrenom']."&NOP=".$_GET['NOP']."'><button><<</button></a>";
+        echo "<a href='index.php?page=1&histoId=".$_GET['histoId']."&histoNom=".$_GET['histoNom']."&histoPrenom=".$_GET['histoPrenom']."&NOP=".$_GET['NOP']."'><button><<</button></a>";
         for($i = -4; $i < 5; $i++)
         {
             if(($pagecourante+$i) > 0 && ($pagecourante+$i) <= $pageTotal)
             {
-                echo "<a href='cinema.php?page=".($pagecourante+$i)."&histoId=".$_GET['histoId']."&histoNom=".$_GET['histoNom']."&histoPrenom=".$_GET['histoPrenom']."&NOP=".$_GET['NOP']."'><button>".($pagecourante+$i)."</button></a>";
+                echo "<a href='index.php?page=".($pagecourante+$i)."&histoId=".$_GET['histoId']."&histoNom=".$_GET['histoNom']."&histoPrenom=".$_GET['histoPrenom']."&NOP=".$_GET['NOP']."'><button>".($pagecourante+$i)."</button></a>";
             }
         }
-        echo "<a href='cinema.php?page=".$pageTotal."&histoId=".$_GET['histoId']."&histoNom=".$_GET['histoNom']."&histoPrenom=".$_GET['histoPrenom']."&NOP=".$_GET['NOP']."'><button>>></button></a>";
+        echo "<a href='index.php?page=".$pageTotal."&histoId=".$_GET['histoId']."&histoNom=".$_GET['histoNom']."&histoPrenom=".$_GET['histoPrenom']."&NOP=".$_GET['NOP']."'><button>>></button></a>";
         echo "</div>";
     }
   
@@ -321,15 +321,15 @@ elseif(isset($_GET['projection']) && !empty($_GET['projection']))
     if($pageTotal > 1)
     {
         echo "<div id='pagebtn'>";
-        echo "<a href='cinema.php?page=1&projection=".$_GET['projection']."&NOP=".$filmParPage."'><button><<</button></a>";
+        echo "<a href='index.php?page=1&projection=".$_GET['projection']."&NOP=".$filmParPage."'><button><<</button></a>";
         for($i = -4; $i < 5; $i++)
         {
             if(($pagecourante+$i) > 0 && ($pagecourante+$i) <= $pageTotal)
             {
-                echo "<a href='cinema.php?page=".($pagecourante+$i)."&projection=".$_GET['projection']."&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
+                echo "<a href='index.php?page=".($pagecourante+$i)."&projection=".$_GET['projection']."&NOP=".$filmParPage."'><button>".($pagecourante+$i)."</button></a>";
             }
         }
-        echo "<a href='cinema.php?page=".$pageTotal."&projection=".$_GET['projection']."&NOP=".$filmParPage."'><button>>></button></a>";
+        echo "<a href='index.php?page=".$pageTotal."&projection=".$_GET['projection']."&NOP=".$filmParPage."'><button>>></button></a>";
         echo "</div>";
     }
 }

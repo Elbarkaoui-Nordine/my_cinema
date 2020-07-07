@@ -24,7 +24,7 @@
 
     
 
-        <form action="cinema.php" method="GET" class='onglets'>
+        <form action="index.php" method="GET" class='onglets'>
             <label for="filmValue">Trouver un film : </label><input type="text" name='filmValue'>
             <span>Par : </span> 
             <select name="selectFilm" id="selector">
@@ -41,7 +41,7 @@
             <input type="submit"   value='valider'>
         </form>
 
-        <form action="cinema.php" method="GET" class='onglets'>
+        <form action="index.php" method="GET" class='onglets'>
             <label for="membreValue">Trouver un membre : </label><input type="text" name='membreValue'>
             <select name="NOP" id="NOP">
                 <option <?php if (isset($_GET["NOP"]) && $_GET["NOP"] == "5") { ?>selected="true" <?php }; ?> value="5">5</option>
@@ -52,12 +52,12 @@
             
         </form>
 
-        <form action="cinema.php" method="GET" class='onglets'>
+        <form action="index.php" method="GET" class='onglets'>
             <label for="aboName"> Abonnement par ID perso :  </label><input type="text" name='aboName'>   
              <input type="submit" value='valider'>
         </form>
 
-        <form action="cinema.php" method="GET" class='onglets'>
+        <form action="index.php" method="GET" class='onglets'>
             <label for="projection">Quels films passent ce soir ? <input <? if (isset($_GET["projection"]) && !empty($_GET["projection"])){ echo "value='".$_GET['projection']."'"; } ?>type="date" name="projection"> </label>
             <select name="NOP" id="NOP">
                 <option <?php if (isset($_GET["NOP"])){ if($_GET["NOP"] == "5") { ?>selected="true" <?php }; }?> value="5">5</option>
