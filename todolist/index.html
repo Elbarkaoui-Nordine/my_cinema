@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </HEAD>
+
+<body>
+    <div>
+        <label for="task">New task</label>
+        <input type="text" id="task" name="task">
+        <button id="newtask">New</button>
+    </div>
+    <div class="flex-container">
+        <div class="list auto">
+            <h1>A faire</h1>
+            <ul id="list_todo">
+            </ul>
+        </div>
+        <div class="list auto">
+            <h1>Fini</h1>
+            <ul id="list_done">
+            </ul>
+        </div>
+    </div>
+    <button id="save">Save</button>
+    <button id="load">Load</button>
+    <div id="result"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
